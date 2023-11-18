@@ -2,7 +2,7 @@
 
 int main(int ac, char **av) {
 	if (ac != 2) {
-		std::cout << "Error: could not open file." << std::endl;
+		std::cerr << "Error: could not open file." << std::endl;
 		return (0);
 	}
 	try {
@@ -10,6 +10,6 @@ int main(int ac, char **av) {
 		bt.runExchange(av[1]);
 	}
 	catch ( const std::exception &e ) {
-		std::cout << "Exception occurred: " << e.what() << std::endl;
+		std::cerr << "Exception occurred: " << e.what() << std::endl;
 	}
 }
